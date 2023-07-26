@@ -8,9 +8,20 @@
     "lint": "npx eslint \"cypress/**/*.js\"",
     "lint:fix": "npx eslint --fix \"cypress/**/*.js\"",
     "prettier": "npx prettier --check .",
-    "prettier:fix": "npx prettier --write ."
+    "prettier:fix": "npx prettier --write .",
+    "prepare": "husky install",
+    "precommit": "npx lint-staged"
   },
-  "license": "ISC",
+  "lint-staged": {
+    "*.{json,md}": [
+      "npm run prettier:fix",
+      "git add ."
+    ],
+    "*.js": [
+      "npm run lint:fix",
+      "git add ."
+    ]
+  },
   "devDependencies": {
     "cypress": "^12.17.2",
     "eslint": "^8.45.0",
@@ -19,6 +30,8 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.0"
   }
 }
