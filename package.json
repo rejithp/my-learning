@@ -4,7 +4,7 @@
   "description": "add-your-description",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx cypress run",
     "lint": "npx eslint \"cypress/**/*.js\"",
     "lint:fix": "npx eslint --fix \"cypress/**/*.js\"",
     "prettier": "npx prettier --check .",
