@@ -1,6 +1,5 @@
-describe('', () => {
-  it('', () => {
-    cy.visit('https://www.google.com/');
-    cy.title().should('eq', 'Google');
+describe('My First Test', () => {
+  it('Does not do much!', () => {
+    expect(true).to.equal(true);
   });
 });
