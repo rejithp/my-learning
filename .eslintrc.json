@@ -11,7 +11,8 @@
   "globals": {
     "describe": true,
     "it": true,
-    "cy": true
+    "cy": true,
+    "expect": true
   },
   "rules": {
     "semi": ["error", "always"],
